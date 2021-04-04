@@ -2,10 +2,11 @@ package PPIx::Cache::Memory;
 
 use strict;
 use warnings;
-use 5.020;
+use 5.026;
 use experimental qw( signatures );
 use Ref::Util qw( is_plain_scalarref is_ref is_blessed_ref );
 use PPI::Util ();
+use Storable qw( dclone );
 
 # ABSTRACT: Cache PPI documents in memory
 # VERSION
@@ -61,8 +62,9 @@ sub get_document ($self, $key)
     : !is_ref $key
       ? lc $key
       : undef;
-  # FIXME: clone
-  $self->{$md5};
+  $self->{$md5}
+    ? dclone $self->{$md5}
+    : undef;
 }
 
 =head2 store_document
@@ -77,8 +79,7 @@ sub store_document ($self, $document )
 {
   return undef unless is_blessed_ref $document && $document->isa('PPI::Document');
   my $md5 = $document->hex_id or return undef;
-  # FIXME: clone
-  $self->{$md5} = $document;
+  $self->{$md5} = dclone $document;
 }
 
 sub isa ($self, $class)
