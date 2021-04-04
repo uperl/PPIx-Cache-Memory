@@ -11,7 +11,9 @@ my $post_diag;
 
 $modules{$_} = $_ for qw(
   ExtUtils::MakeMaker
+  PPI::Document
   PPI::Util
+  Path::Tiny
   Ref::Util
   Test2::V0
 );
