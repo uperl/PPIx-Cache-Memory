@@ -1,4 +1,4 @@
-# PPIx::Cache::Memory ![linux](https://github.com/uperl/PPIx-Cache-Memory/workflows/linux/badge.svg) ![windows](https://github.com/uperl/PPIx-Cache-Memory/workflows/windows/badge.svg) ![macos](https://github.com/uperl/PPIx-Cache-Memory/workflows/macos/badge.svg) ![msys2-mingw](https://github.com/uperl/PPIx-Cache-Memory/workflows/msys2-mingw/badge.svg)
+# PPIx::Cache::Memory ![linux](https://github.com/uperl/PPIx-Cache-Memory/workflows/linux/badge.svg) ![windows](https://github.com/uperl/PPIx-Cache-Memory/workflows/windows/badge.svg) ![macos](https://github.com/uperl/PPIx-Cache-Memory/workflows/macos/badge.svg)
 
 Cache PPI documents in memory
 
