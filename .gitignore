@@ -2,4 +2,7 @@ PPIx-Cache-Memory-*
 /.build/
 *.swp
 
-
+/PPIx-Cache-Memory-*
+/.build
+*.old
+*.orig
